@@ -10,7 +10,7 @@ const router = express.Router();
 
 // env variables
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/pct-mongo';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/23456';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
