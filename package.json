@@ -1,0 +1,41 @@
+{
+  "name": "fullstack-app-be",
+  "version": "1.0.0",
+  "description": "back end of PCT Elements app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carriecarter/fullstack-app-be.git"
+  },
+  "author": "Carrie Carter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carriecarter/fullstack-app-be/issues"
+  },
+  "homepage": "https://github.com/carriecarter/fullstack-app-be#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "mocha": "mocha",
+    "test": "npm run mocha",
+    "test:watch": "nodemon --exec 'npm run mocha -s'",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "db:create": "node db/create-db.js",
+    "db:load": "node db/load-db.js",
+    "db:drop": "node db/drop-tables",
+    "db:all": "npm run db:drop && npm run db:create && npm run db:load"
+  }
+}
